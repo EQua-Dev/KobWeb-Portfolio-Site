@@ -30,6 +30,8 @@ import com.awesomnessstudios.web.HeadlineTextStyle
 import com.awesomnessstudios.web.SubheadlineTextStyle
 import com.awesomnessstudios.web.components.layouts.PageLayout
 import com.awesomnessstudios.web.toSitePalette
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.ui.Alignment
 
 // Container that has a tagline and grid on desktop, and just the tagline on mobile
 val HeroContainerStyle by ComponentStyle {
@@ -66,7 +68,14 @@ private fun GridCell(color: Color, row: Int, column: Int, width: Int? = null, he
 @Page
 @Composable
 fun HomePage() {
-    PageLayout("Home") {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+    }
+    /*PageLayout("Home") {
         Row(HeroContainerStyle.toModifier()) {
             Box {
                 val sitePalette = ColorMode.current.toSitePalette()
@@ -126,5 +135,9 @@ fun HomePage() {
                 GridCell(ColorSchemes.Monochrome._800, 3, 1, width = 5)
             }
         }
-    }
+    }*/
 }
+
+
+
+
