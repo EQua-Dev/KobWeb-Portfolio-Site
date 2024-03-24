@@ -29,6 +29,7 @@ import org.jetbrains.compose.web.dom.Text
 import com.awesomnessstudios.web.HeadlineTextStyle
 import com.awesomnessstudios.web.SubheadlineTextStyle
 import com.awesomnessstudios.web.components.layouts.PageLayout
+import com.awesomnessstudios.web.components.sections.MainSection
 import com.awesomnessstudios.web.toSitePalette
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -73,7 +74,7 @@ fun HomePage() {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        MainSection()
     }
     /*PageLayout("Home") {
         Row(HeroContainerStyle.toModifier()) {
