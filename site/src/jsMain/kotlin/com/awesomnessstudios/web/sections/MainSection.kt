@@ -1,6 +1,7 @@
-package com.awesomnessstudios.web.components.sections
+package com.awesomnessstudios.web.sections
 
 import androidx.compose.runtime.Composable
+import com.awesomnessstudios.web.components.Header
 import com.awesomnessstudios.web.util.Constants.SECTION_WIDTH
 import com.awesomnessstudios.web.util.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
@@ -21,6 +22,7 @@ fun MainSection() {
         contentAlignment = Alignment.TopCenter
     ) {
         MainBackground()
+        Header()
     }
 }
 

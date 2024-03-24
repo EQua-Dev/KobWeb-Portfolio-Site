@@ -1,4 +1,4 @@
-package com.awesomnessstudios.web.components.sections
+package com.awesomnessstudios.web.components
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.browser.dom.ElementTarget
@@ -33,7 +33,16 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.*
 import com.awesomnessstudios.web.components.widgets.IconButton
+import com.awesomnessstudios.web.models.Section
+import com.awesomnessstudios.web.models.Theme
 import com.awesomnessstudios.web.toSitePalette
+import com.awesomnessstudios.web.util.Constants.FONT_FAMILY
+import com.awesomnessstudios.web.util.Res
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import org.w3c.fetch.Headers
+
+/*
 
 val NavHeaderStyle by ComponentStyle.base {
     Modifier.fillMaxWidth().padding(1.cssRem)
@@ -171,6 +180,51 @@ private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd
                     MenuItems()
                 }
             }
+        }
+    }
+}
+*/
+
+
+@Composable
+fun Header() {
+    Row(
+        modifier = Modifier.fillMaxWidth(80.percent).margin(topBottom = 50.px),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        LeftSide()
+        RightSide()
+    }
+}
+
+@Composable
+fun LeftSide() {
+    Row(modifier = Modifier.padding(all = 20.px)) {
+        Image(
+            src = Res.Image.logo,
+            description = "Logo Image"
+        )
+    }
+}
+
+@Composable
+fun RightSide() {
+    Row(
+        modifier = Modifier.fillMaxWidth().borderRadius(r = 50.px).backgroundColor(Theme.LightGray.rgb)
+            .padding(all = 20.px),
+        horizontalArrangement = Arrangement.End
+    ) {
+        Section.values().take(6).forEach { section ->
+            Link(
+                modifier = Modifier
+                    .padding(right = 30.px)
+                    .fontFamily(FONT_FAMILY)
+                    .fontSize(18.px)
+                    .fontWeight(FontWeight.Normal),
+                path = section.path,
+                text = section.title
+            )
+
         }
     }
 }

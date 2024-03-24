@@ -1,4 +1,4 @@
-package com.awesomnessstudios.web.components.sections
+package com.awesomnessstudios.web.components
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextAlign

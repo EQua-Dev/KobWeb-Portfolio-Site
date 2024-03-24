@@ -18,8 +18,7 @@ import kotlinx.browser.document
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
-import com.awesomnessstudios.web.components.sections.Footer
-import com.awesomnessstudios.web.components.sections.NavHeader
+import com.awesomnessstudios.web.components.Footer
 import com.awesomnessstudios.web.toSitePalette
 
 val PageContentStyle by ComponentStyle {
@@ -90,7 +89,7 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
             Modifier.fillMaxSize().gridRow(1),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            NavHeader()
+            //NavHeader()
             Column(
                 PageContentStyle.toModifier(),
                 horizontalAlignment = Alignment.CenterHorizontally
