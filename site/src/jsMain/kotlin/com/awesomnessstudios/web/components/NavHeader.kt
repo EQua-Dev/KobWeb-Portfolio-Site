@@ -204,7 +204,6 @@ fun Header() {
     ) {
         LeftSide(breakpoint)
         if (breakpoint > Breakpoint.MD) {
-            println("is desktop mode")
             RightSide()
         }
     }

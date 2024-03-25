@@ -2,10 +2,12 @@ package com.awesomnessstudios.web.sections
 
 import androidx.compose.runtime.Composable
 import com.awesomnessstudios.web.components.Header
+import com.awesomnessstudios.web.components.SocialBar
 import com.awesomnessstudios.web.util.Constants.SECTION_WIDTH
 import com.awesomnessstudios.web.util.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
@@ -22,7 +24,7 @@ fun MainSection() {
         contentAlignment = Alignment.TopCenter
     ) {
         MainBackground()
-        Header()
+        MainContent()
     }
 }
 
@@ -32,4 +34,13 @@ fun MainBackground() {
         modifier = Modifier.fillMaxSize().objectFit(ObjectFit.Cover), src = Res.Image.background,
         description = "Background Image"
     )
+}
+
+@Composable
+fun MainContent() {
+    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally){
+        Header()
+        SocialBar()
+    }
+
 }

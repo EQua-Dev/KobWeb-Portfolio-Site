@@ -35,3 +35,13 @@ val LogoStyle by ComponentStyle {
         Modifier.transform { rotate((-10).deg) }
     }
 }
+
+val SocialLinksStyle by ComponentStyle {
+    base{
+        Modifier.color(Theme.Gray.rgb)
+            .transition(CSSTransition(property = "color", duration = 200.ms))// handle the animation delay of the color change
+    }
+    hover{
+        Modifier.color(Theme.Primary.rgb)
+    }
+}
