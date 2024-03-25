@@ -9,5 +9,6 @@ object Res{
     object Image{
         const val background = "background.svg"
         const val logo = "developer.svg"
+        const val hamburgermenu = "hamburgermenu.svg"
     }
 }
